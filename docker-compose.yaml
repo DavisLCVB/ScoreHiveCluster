@@ -1,0 +1,58 @@
+services:
+  mpi-master:
+    image: scorehive-mpi:latest
+    container_name: scorehive-master
+    hostname: mpi-master
+    networks:
+      - scorehive-net
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./hostfile:/app/hostfile:ro
+    environment:
+      - DEBUG=1
+    depends_on:
+      - mpi-worker1
+      - mpi-worker2
+      - mpi-worker3
+      - mpi-worker4
+
+  mpi-worker1:
+    image: scorehive-mpi:latest
+    container_name: scorehive-worker1
+    hostname: mpi-worker1
+    networks:
+      - scorehive-net
+    environment:
+      - DEBUG=1
+
+  mpi-worker2:
+    image: scorehive-mpi:latest
+    container_name: scorehive-worker2
+    hostname: mpi-worker2
+    networks:
+      - scorehive-net
+    environment:
+      - DEBUG=1
+
+  mpi-worker3:
+    image: scorehive-mpi:latest
+    container_name: scorehive-worker3
+    hostname: mpi-worker3
+    networks:
+      - scorehive-net
+    environment:
+      - DEBUG=1
+
+  mpi-worker4:
+    image: scorehive-mpi:latest
+    container_name: scorehive-worker4
+    hostname: mpi-worker4
+    networks:
+      - scorehive-net
+    environment:
+      - DEBUG=1
+
+networks:
+  scorehive-net:
+    driver: bridge

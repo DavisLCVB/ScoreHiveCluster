@@ -1,0 +1,3 @@
+/home/davis/Dev/ProgramacionParalela/ScoreHiveCluster/build/debug/CMakeFiles/ScoreHiveCluster.dir
+/home/davis/Dev/ProgramacionParalela/ScoreHiveCluster/build/debug/CMakeFiles/edit_cache.dir
+/home/davis/Dev/ProgramacionParalela/ScoreHiveCluster/build/debug/CMakeFiles/rebuild_cache.dir

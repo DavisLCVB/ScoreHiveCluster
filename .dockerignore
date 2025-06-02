@@ -1,0 +1,30 @@
+# Directorios de build locales
+build/
+
+# Archivos de Docker
+docker-compose.yml
+Dockerfile
+.dockerignore
+
+# Scripts de automatización
+*.sh
+
+# Git
+.git/
+.gitignore
+
+# IDE y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archivos temporales
+*.tmp
+*.log
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+

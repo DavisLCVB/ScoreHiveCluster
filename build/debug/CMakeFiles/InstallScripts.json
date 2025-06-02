@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/davis/Dev/ProgramacionParalela/ScoreHiveCluster/build/debug/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
