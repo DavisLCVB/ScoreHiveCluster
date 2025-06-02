@@ -1,0 +1,53 @@
+services:
+  - type: web
+    name: scorehive-master
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    envVars:
+      - key: DEBUG
+        value: "1"
+      - key: PORT
+        value: "8080"
+    healthCheckPath: /
+    
+  - type: private service
+    name: scorehive-worker1
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    envVars:
+      - key: DEBUG
+        value: "1"
+        
+  - type: private service
+    name: scorehive-worker2
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    envVars:
+      - key: DEBUG
+        value: "1"
+
+  - type: private service
+    name: scorehive-worker3
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    envVars:
+      - key: DEBUG
+        value: "1"
+
+  - type: private service
+    name: scorehive-worker4
+    env: docker
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    plan: starter
+    envVars:
+      - key: DEBUG
+        value: "1"
